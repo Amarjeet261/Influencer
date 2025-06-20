@@ -26,12 +26,12 @@ export default function ModelProfile() {
   };
 
   return (
-    <section className="bg-gray-50 py-12 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12">
+    <section className="min-h-[650px] w-full flex justify-center items-center  py-[20px] ">
+      <div className="flex w-[85%] h-full max-md:flex-col max-md:items-center ">
         
         {/* Left Image */}
         <div className="w-full lg:w-1/2">
-          <div className="relative h-[500px] w-[500px] rounded-lg overflow-hidden shadow-md max-w-md mx-auto">
+          <div className="relative h-[500px] w-[500px] max-md:w-[300px]  rounded-lg overflow-hidden shadow-md max-w-md mx-auto">
             <Image
               src={modelData.imageSrc}
               alt={modelData.name}
