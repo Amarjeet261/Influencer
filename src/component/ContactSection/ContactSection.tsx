@@ -22,7 +22,7 @@ const contactData: ContactInfo = {
       name: "YouTube",
       label: "THE INDIAN DREAMER",
       icon: "/youtube-logo.png",
-      link: "https://youtube.com",
+      link: "https://youtube.com/@akxhittaa?si=KFgxzZJfBOoUlGy-",
     },
     {
       name: "Instagram",

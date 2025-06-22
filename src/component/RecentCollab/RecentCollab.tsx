@@ -30,7 +30,7 @@ export default function RecentCollaboration() {
   return (
     <section className="relative w-full bg-[url('/collab-bg.jpg')] bg-cover bg-center py-16 px-4 md:px-12">
       <div className="text-center mb-10">
-        <h2 className="text-6xl max-md:text-4xl font-bold tracking-wide text-[#511d1d] uppercase">
+        <h2 className="text-6xl max-md:text-4xl font-bold tracking-wide text-[#511d1d] uppercase [@media(max-width:390px)]:text-3xl">
           Recent Collaboration
         </h2>
       </div>

@@ -26,12 +26,12 @@ export default function ModelProfile() {
   };
 
   return (
-    <section className="min-h-[650px] w-full flex justify-center items-center  py-[20px] ">
-      <div className="flex w-[85%] h-full max-md:flex-col max-md:items-center ">
-        
-        {/* Left Image */}
-        <div className="w-full lg:w-1/2">
-          <div className="relative h-[500px] w-[500px] max-md:w-[300px]  rounded-lg overflow-hidden shadow-md max-w-md mx-auto">
+    <section className="w-full min-h-[650px] flex justify-center items-center py-12 px-4">
+      <div className="w-full max-w-6xl flex gap-12 max-lg:flex-col max-lg:items-center">
+
+        {/* Image */}
+        <div className="w-full max-lg:w-auto flex justify-center">
+          <div className="relative w-[300px] h-[400px] max-md:w-[250px] max-md:h-[350px] rounded-lg overflow-hidden shadow-md">
             <Image
               src={modelData.imageSrc}
               alt={modelData.name}
@@ -41,13 +41,13 @@ export default function ModelProfile() {
           </div>
         </div>
 
-        {/* Right Info */}
-        <div className="w-full max-lg:w-1/2 flex flex-col justify-center items-center">
-          <h2 className="text-5xl font-bold text-[#561c1c] mb-10 text-center lg:text-left tracking-wide">
+        {/* Info */}
+        <div className="w-full max-lg:w-full text-center max-lg:text-center max-lg:mt-6">
+          <h2 className="text-5xl font-bold text-[#561c1c] mb-8 tracking-wide max-md:text-3xl">
             {modelData.name}
           </h2>
 
-          <div className="grid grid-cols-2 gap-y-6 gap-x-10 border-t border-gray-300 pt-6 text-base">
+          <div className="grid grid-cols-2 gap-y-6 gap-x-10 border-t border-gray-300 pt-6 text-base max-sm:grid-cols-2">
             {modelData.stats.map(({ label, value }) => (
               <div key={label}>
                 <p className="font-semibold tracking-wide text-gray-800 uppercase">{label}</p>

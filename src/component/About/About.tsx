@@ -1,0 +1,161 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Instagram,
+  Youtube,
+  Twitter,
+  Facebook,
+  Mail,
+  LucideIcon,
+} from "lucide-react";
+import { useEffect, useState } from "react";
+
+// Interfaces
+interface SocialLink {
+  href: string;
+  label: string;
+  icon: LucideIcon;
+  color: string;
+}
+
+interface InfluencerProfile {
+  name: string;
+  bio: string;
+  image: string;
+  stats: { label: string; value: number; suffix?: string }[];
+  mission: string;
+  socials: SocialLink[];
+}
+
+// Data
+const data: InfluencerProfile = {
+  name: "Akshita Rawat",
+  bio: "Hi, I'm Akshita! Rawat A fashion and lifestyle influencer who shares beauty tips, travel diaries, and real-life moments. I help others live boldly and beautifully.",
+  image: "/collab-1.jpg",
+  stats: [
+    { label: "Instagram Followers", value: 203, suffix: "K+" },
+    { label: "YouTube Subscribers", value: 282, suffix: "K+" },
+    { label: "Brand Collaborations", value: 120, suffix: "+" },
+    { label: "Total Reach", value: 10000000, suffix: "+" },
+  ],
+  mission:
+    "I aim to empower and inspire. Whether it’s through style, self-expression, or sharing honest moments, I want to help others embrace who they are and live fully.",
+  socials: [
+    {
+      href: "https://instagram.com",
+      label: "Instagram",
+      icon: Instagram,
+      color: "text-pink-500",
+    },
+    {
+      href: "https://youtube.com",
+      label: "YouTube",
+      icon: Youtube,
+      color: "text-red-500",
+    },
+    {
+      href: "https://facebook.com",
+      label: "Facebook",
+      icon: Facebook,
+      color: "text-blue-600",
+    },
+    {
+      href: "mailto:email@example.com",
+      label: "Email",
+      icon: Mail,
+      color: "text-yellow-400",
+    },
+  ],
+};
+
+// Hook for counter
+function useCountUp(target: number, duration: number = 1000): number {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const step = () => {
+      start += target / (duration / 16);
+      if (start < target) {
+        setCount(Math.floor(start));
+        requestAnimationFrame(step);
+      } else {
+        setCount(target);
+      }
+    };
+    step();
+  }, [target, duration]);
+
+  return count;
+}
+
+export default function About() {
+  return (
+    <section className="min-h-screen w-full flex flex-col justify-center items-center mt-10 bg-white text-gray-800 px-4 py-16 md:px-10 max-md:mt-20 ">
+      {/* Hero Section */}
+      <div className="w-[85%] flex flex-col max-lg:flex-col md:flex-row items-center gap-12">
+        <div className="relative w-64 h-64 max-lg:w-[300px] max-lg:h-[400px] max-lg:rounded rounded-full overflow-hidden shadow-lg">
+          <Image
+            src={data.image}
+            alt={`${data.name} Profile`}
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        <div className="flex-1 text-center max-md:text-center max-sm:text-center md:text-left">
+          <h1 className="text-4xl max-sm:text-2xl font-bold text-pink-600 uppercase mb-2">
+            {data.name}
+          </h1>
+          <p className="text-lg max-w-xl max-sm:text-base">{data.bio}</p>
+
+          {/* Social Links */}
+          <div className="flex justify-center md:justify-start gap-4 mt-4">
+            {data.socials.map((social, index) => {
+              const Icon = social.icon;
+              return (
+                <Link
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  aria-label={social.label}
+                  className={`w-10 h-10 flex items-center justify-center rounded-full bg-neutral-900 hover:scale-110 transition-transform ${social.color}`}
+                >
+                  <Icon className="w-5 h-5" />
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Section */}
+      <div className="w-[70%] grid grid-cols-4 max-md:grid-cols-2 [@media(max-width:390px)]:grid-cols-1 gap-6 mt-16 text-center">
+        {data.stats.map((stat, idx) => {
+          const count = useCountUp(stat.value);
+          return (
+            <div key={idx}>
+              <p className="text-3xl font-bold text-pink-600">
+                {count.toLocaleString()}
+                {stat.suffix}
+              </p>
+              <p className="text-sm text-gray-500">{stat.label}</p>
+            </div>
+          );
+        })}
+      </div>
+
+
+
+      {/* Mission Section */}
+      <div className="mt-20 max-w-4xl mx-auto text-center px-4">
+        <h2 className="text-3xl max-sm:text-2xl font-semibold mb-4 text-pink-600">
+          My Mission
+        </h2>
+        <p className="text-lg max-sm:text-base text-gray-700">{data.mission}</p>
+      </div>
+    </section>
+  );
+}

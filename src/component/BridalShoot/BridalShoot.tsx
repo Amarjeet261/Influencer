@@ -1,12 +1,18 @@
 import Image from "next/image";
 
 export default function BridalShoot() {
-  const images = [
-    "/semi-bridal-1.png",
-    "/semi-bridal-2.png",
-    "/semi-bridal-3.png",
-    "/semi-bridal-4.png",
-  ];
+interface ImageData {
+  image: string;
+}
+
+const images: ImageData[] = [
+  { image: "/semi-bridal-1.png" },
+  { image: "/semi-bridal-2.png" },
+  { image: "/semi-bridal-3.png" },
+  { image: "/semi-bridal-4.png" },
+];
+
+
 
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center  bg-[url('/semi-bridal-bg.jpg')] bg-cover bg-center py-16 px-4 md:px-12">
@@ -17,7 +23,7 @@ export default function BridalShoot() {
             className="relative w-[240px] h-[360px] max-lg:w-[200px] max-lg:h-[320px] max-sm:w-[180px] max-sm:h-[280px] rounded-xl overflow-hidden"
           >
             <Image
-              src={img}
+              src={img.image}
               alt={`Bridal ${index + 1}`}
               fill
               className="object-cover transition-transform duration-300 hover:scale-105"
