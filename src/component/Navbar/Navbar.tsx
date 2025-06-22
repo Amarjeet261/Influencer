@@ -3,16 +3,10 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Menu, X } from "lucide-react";
+import { navLinks } from "@/utils/data/Navbar";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Collab", href: "/collab" },
-  ];
 
   return (
     <nav className="w-full px-4 sm:px-6 py-4 shadow-md bg-white fixed top-0 left-0 z-50 overflow-x-hidden">

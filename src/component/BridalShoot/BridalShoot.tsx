@@ -1,19 +1,7 @@
+import { images } from "@/utils/data/BridalShoot";
 import Image from "next/image";
 
 export default function BridalShoot() {
-interface ImageData {
-  image: string;
-}
-
-const images: ImageData[] = [
-  { image: "/semi-bridal-1.png" },
-  { image: "/semi-bridal-2.png" },
-  { image: "/semi-bridal-3.png" },
-  { image: "/semi-bridal-4.png" },
-];
-
-
-
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center  bg-[url('/semi-bridal-bg.jpg')] bg-cover bg-center py-16 px-4 md:px-12">
       <div className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-y-6 gap-x-20 place-items-center">

@@ -1,30 +1,8 @@
+import { modelData } from "@/utils/data/ModelProfile";
 import Image from "next/image";
 
+
 export default function ModelProfile() {
-  interface ModelInfo {
-    name: string;
-    imageSrc: string;
-    stats: {
-      label: string;
-      value: string;
-    }[];
-  }
-
-  const modelData: ModelInfo = {
-    name: "AKSHITA RAWAT",
-    imageSrc: "/akshita.jpg",
-    stats: [
-      { label: "HEIGHT", value: `5'2"` },
-      { label: "SHOES", value: "US 5.5" },
-      { label: "BUST", value: "34 Inch" },
-      { label: "DRESS", value: "US 4 - US 6" },
-      { label: "WAIST", value: "28.5 Inch" },
-      { label: "HAIR", value: "DARK BROWN" },
-      { label: "HIPS", value: "35" },
-      { label: "EYES", value: "BROWN" },
-    ],
-  };
-
   return (
     <section className="w-full min-h-[650px] flex justify-center items-center py-12 px-4">
       <div className="w-full max-w-6xl flex gap-12 max-lg:flex-col max-lg:items-center">

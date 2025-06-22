@@ -1,22 +1,6 @@
+import { headerData } from "@/utils/data/Header";
 import Image from "next/image";
 
-interface HeaderData {
-  roleLabel: string;
-  firstName: string;
-  lastName: string;
-  roles: string[];
-  imageSrc: string;
-  imageAlt: string;
-}
-
-const headerData: HeaderData = {
-  roleLabel: "Influencer",
-  firstName: "Akshita",
-  lastName: "Rawat",
-  roles: ["Content Creator", "Vlogger", "Influencer"],
-  imageSrc: "/header-img.png",
-  imageAlt: "Akshita Rawat",
-};
 
 export default function Header() {
   return (

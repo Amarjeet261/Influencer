@@ -1,33 +1,5 @@
+import { influencerGalleryData } from '@/utils/data/Gallery';
 import React from 'react';
-
-export interface InfluencerImage {
-  id: number;
-  title: string;
-  imageUrl: string;
-}
-
-export const influencerGalleryData: InfluencerImage[] = [
-  {
-    id: 1,
-    title: 'Riverside Photoshoot',
-    imageUrl: '/riverpic.png',
-  },
-  {
-    id: 2,
-    title: 'Urban Style',
-    imageUrl: '/urbanpic.png',
-  },
-  {
-    id: 3,
-    title: 'Sari Look',
-    imageUrl: '/Saripic.png',
-  },
-  {
-    id: 4,
-    title: 'Luxury Look',
-    imageUrl: '/collab-1.jpg',
-  },
-];
 
 export function Gallery() {
   return (
@@ -35,7 +7,7 @@ export function Gallery() {
       <div className="w-full max-w-screen-xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8"> Gallery</h2>
 
-        {/* Grid that adapts using max-* prefixes */}
+        {/*gallery-container */}
         <div className="grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-6 max-w-full mx-auto">
           {influencerGalleryData.map(function (item) {
             return (
