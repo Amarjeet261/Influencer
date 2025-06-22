@@ -35,19 +35,19 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: "YouTube",
-    href: "https://youtube.com/@ajyouthmediia",
+    href: "https://www.youtube.com/@akxhittaa",
     icon: Youtube,
     colorClass: "text-red-600",
   },
   {
     name: "Facebook",
-    href: "https://facebook.com/ajyouthmediia",
+    href: "#",
     icon: Facebook,
     colorClass: "text-blue-600",
   },
   {
     name: "Email",
-    href: "mailto:contact@ajyouthmediia.com",
+    href: "#",
     icon: Mail,
     colorClass: "text-yellow-400",
   },

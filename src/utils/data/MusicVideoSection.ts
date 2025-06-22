@@ -10,13 +10,13 @@ export const musicVideos: MusicVideo[] = [
   {
     title: "BAGESHWAR SHEHRA",
     image: "/music-1.jpg",
-    link: "https://www.youtube.com/watch?v=your_video_1",
+    link: "https://youtu.be/KRCKq8QvYPo?si=zRcugPVoi2xqJt9N",
     color: "text-orange-700",
   },
   {
     title: "MERI RANJANA",
     image: "/music-2.jpg",
-    link: "https://www.youtube.com/watch?v=your_video_2",
+    link: "https://youtu.be/2UywY062PB8?si=lTmYOh9vHDoKdXwQ",
     color: "text-fuchsia-700",
   },
 ];
