@@ -35,7 +35,7 @@ export const data: InfluencerProfile = {
     { label: "Total Reach", value: 10000000, suffix: "+" },
   ],
   mission:
-    "I aim to empower and inspire. Whether it’s through style, self-expression, or sharing honest moments, I want to help others embrace who they are and live fully.",
+    "I aim to empower and inspire. Whether its through style, self-expression, or sharing honest moments, I want to help others embrace who they are and live fully.",
   socials: [
     {
       href: "https://instagram.com",
