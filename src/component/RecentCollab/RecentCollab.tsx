@@ -1,9 +1,14 @@
+"use client"
 import { collaborationData } from "@/utils/data/RecentCollab";
 import Image from "next/image";
-
-
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function RecentCollaboration() {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+      }, []);
   return (
     <section className="relative w-full bg-[url('/collab-bg.jpg')] bg-cover bg-center py-16 px-4 md:px-12">
       <div className="text-center mb-10">
@@ -12,7 +17,7 @@ export default function RecentCollaboration() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-10 max-w-6xl mx-auto">
+      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-10 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="3000">
         {collaborationData.map((item, idx) => (
           <div key={idx} className="flex flex-col items-center gap-4 text-center">
             <div

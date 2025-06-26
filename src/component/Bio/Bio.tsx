@@ -1,13 +1,20 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function BioSection() {
+    useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <section className="w-full bg-white py-12 px-4 md:px-12">
       <Link href='/bio'/>
       <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-8 items-start">
         {/* Bio Text */}
-        <div>
+        <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h3 className="uppercase text-sm font-semibold text-black mb-4 max-md:text-2xl max-lg:text-4xl">Bio</h3>
           <p className="text-fuchsia-700 text-2xl max-md:text-xl leading-relaxed font-medium">
             I'm passionate about creating engaging and inspiring content that connects with my audience.
@@ -19,7 +26,7 @@ export default function BioSection() {
         </div>
 
         {/* Images */}
-        <div className="flex gap-4 justify-evenly max-md:items-start">
+        <div className="flex gap-4 justify-evenly max-md:items-start"data-aos="fade-left" data-aos-duration="5000">
           <div className="relative w-[200px] h-[300px] max-md:w-32 max-md:h-52">
             <Image
               src="/bio-1.jpg"

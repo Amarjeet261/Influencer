@@ -5,12 +5,11 @@ import { Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12 min-h-[300px] w-full">
+    <footer className="bg-black text-white w-full h-auto py-12">
       {/* Main Footer Section */}
-      <div className="max-w-7xl mx-auto px-6 grid max-md:grid-cols-1 grid-cols-3 gap-8 text-center md:text-left">
-
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 gap-8 text-left max-md:grid-cols-1 max-md:text-center">
         {/* Profile Section */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 justify-start max-md:justify-center">
           <div className="relative w-20 h-20">
             <Image
               src={profile.imageUrl}
@@ -42,7 +41,7 @@ export default function Footer() {
         {/* Social Media */}
         <div>
           <h3 className="font-semibold mb-2">Follow Us</h3>
-          <div className="flex justify-center md:justify-start gap-4 text-gray-300">
+          <div className="flex gap-4 justify-start max-md:justify-center text-gray-300">
             {socialLinks.map(({ name, href, icon: Icon, colorClass }) => (
               <Link
                 key={name}
@@ -60,17 +59,37 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Line with Instagram icon */}
-      <div className="text-center text-sm text-gray-400 border-t border-gray-800 mt-10 pt-4 flex items-center justify-center gap-2">
-        <Link
-          href="https://www.instagram.com/ajyouthmediia/"
-          target="_blank"
-          aria-label="Instagram"
-        >
-          <Instagram className="w-6 h-6 text-pink-500 hover:text-white transition" />
-        </Link>
-        &copy; <span className="font-semibold text-white">AJYouthMediia</span>
-        . All rights reserved.
+      {/* Bottom Line */}
+      <div className="border-t border-gray-800 mt-10 pt-6 px-4">
+        <div className="w-full max-w-7xl mx-auto flex justify-between items-center px-5 py-4 gap-4 text-sm text-gray-400 max-md:flex-col max-md:gap-2 max-md:text-center">
+          {/* Left */}
+          <div className="flex items-center gap-2 justify-center max-md:flex-col max-md:gap-1">
+            <span>&copy; 2025. All rights reserved.</span>
+            <Link
+              href="https://www.instagram.com/ajyouthmediia/"
+              target="_blank"
+              aria-label="AJYouthMediia Instagram"
+              className="flex items-center gap-1 font-semibold text-white"
+            >
+              <Instagram className="w-5 h-5 text-pink-500" />
+              AJYouthMediia
+            </Link>
+          </div>
+
+          {/* Right */}
+          <div className="flex items-center gap-2 justify-center max-md:flex-col max-md:gap-1">
+            <span>The webpage is managed by</span>
+            <Link
+              href="https://www.instagram.com/ajyouthmediia/"
+              target="_blank"
+              aria-label="Instagram"
+              className="flex items-center gap-1 "
+            >
+              <Instagram className="w-5 h-5 text-pink-500" />
+              <span className="font-semibold text-white">Amarjeet Rajput</span>
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

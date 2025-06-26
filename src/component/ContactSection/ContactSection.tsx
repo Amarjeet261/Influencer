@@ -1,14 +1,20 @@
-// ContactSection.tsx
+"use client"
 import { contactData } from "@/utils/data/ContactSection";
 import Image from "next/image";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function ContactSection() {
+   useEffect(() => {
+          AOS.init({ duration: 1000 });
+        }, []);
   return (
     <section className="bg-[url('/background.png')] bg-cover bg-center py-12 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-start justify-between">
         {/* Left Info Section */}
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 space-y-6" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h2 className="text-5xl font-bold text-[#561c1c]">Work with Me</h2>
 
           <div className="space-y-4 text-sm sm:text-base">
@@ -50,7 +56,7 @@ export default function ContactSection() {
         </div>
 
         {/* Right Image Section */}
-        <div className="flex-1 max-w-sm md:max-w-md">
+        <div className="flex-1 max-w-sm md:max-w-md" data-aos="fade-left" data-aos-duration="3000">
           <Image
             src={contactData.image}
             alt="Akshita Portrait"

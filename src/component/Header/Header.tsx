@@ -34,7 +34,7 @@ export default function Header() {
         </div>
 
         {/* Right Section - Image */}
-        <div className="flex justify-center items-center px-4 py-4 max-sm:px-2 max-sm:py-2 relative">
+        <div className="flex justify-center items-center px-4 py-4 max-sm:px-2 max-sm:py-2 relative " >
           <div className="relative w-[400px] h-[500px] max-lg:w-[350px] max-lg:h-[450px] max-md:w-[300px] max-md:h-[400px] max-sm:w-[250px] max-sm:h-[350px]">
             <Image
               src={headerData.imageSrc}
