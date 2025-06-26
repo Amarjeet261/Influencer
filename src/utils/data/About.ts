@@ -1,7 +1,6 @@
 import {
   Instagram,
   Youtube,
-  Twitter,
   Facebook,
   Mail,
   LucideIcon,

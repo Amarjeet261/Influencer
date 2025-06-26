@@ -69,7 +69,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block text-gray-800 font-medium hover:text-orange-600 transition"
+              className="block text-gray-800 font-medium  transition"
             >
               {link.name}
             </Link>

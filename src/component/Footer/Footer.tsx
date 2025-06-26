@@ -80,7 +80,7 @@ export default function Footer() {
           <div className="flex items-center gap-2 justify-center max-md:flex-col max-md:gap-1">
             <span>The webpage is managed by</span>
             <Link
-              href="https://www.instagram.com/ajyouthmediia/"
+              href="https://www.instagram.com/amarjeetrajput326/"
               target="_blank"
               aria-label="Instagram"
               className="flex items-center gap-1 "

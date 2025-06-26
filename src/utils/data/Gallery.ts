@@ -4,6 +4,7 @@ export interface InfluencerImage {
   imageUrl: string;
 }
 
+
 export const influencerGalleryData: InfluencerImage[] = [
   {
     id: 1,

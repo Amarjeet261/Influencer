@@ -17,7 +17,7 @@ export default function BioSection() {
         <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h3 className="uppercase text-sm font-semibold text-black mb-4 max-md:text-2xl max-lg:text-4xl">Bio</h3>
           <p className="text-fuchsia-700 text-2xl max-md:text-xl leading-relaxed font-medium">
-            I'm passionate about creating engaging and inspiring content that connects with my audience.
+            I&apos;m passionate about creating engaging and inspiring content that connects with my audience.
             From Content Creator to Vlogger and everything in between, I strive to deliver valuable and entertaining
             experiences. I love exploring the world of Beauty, Fashion, Dance, Acting and lifestyle and sharing my
             unique perspective with you. Join me on this journey as I discover new trends, learn together, or simply
